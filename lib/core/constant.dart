@@ -22,8 +22,7 @@ class ApiConstant {
   //https://accept.paymob.com/api/auth/tokens
   static const String baseURL = 'https://accept.paymob.com/api/';
   static const String authEndPoint = 'auth/tokens';
-  static const String apiKey =
-      'ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SnVZVzFsSWpvaWFXNXBkR2xoYkNJc0ltTnNZWE56SWpvaVRXVnlZMmhoYm5RaUxDSndjbTltYVd4bFgzQnJJam8yT1RNek5qaDkueVozcFBWajVSbjNCQmg2WG9RSEVmeEk1bU5ORndWTkI1eFBvTmV5U210S05WazRWV3dRNHdCc3BnWUlMeHIteC1UMV9qcExJTVNzTVFNSlktQzlPTUE=';
+  static const String apiKey = 'YOR_API_KEY';
   static String toknAfterAuth = '';
   static const String ordersEndpoint = 'ecommerce/orders';
   static const String paymentKeyEndpoint = 'acceptance/payment_keys';

@@ -36,39 +36,8 @@ class ToggleScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Center(
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const VisaScreen()),
-                    );
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 120.h,
-                        width: 120.h,
-                        child: Image.asset(
-                          AssetsData.visaImage,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 12.h,
-                      ),
-                      Text(
-                        'Pay by card',
-                        style: TextStyle(
-                            fontSize: 22.sp,
-                            color: MyColors.orangeColor,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                ),
+              const Center(
+                child: NavToVisaScreen(),
               ),
               SizedBox(
                 height: 80.h,
@@ -97,6 +66,47 @@ class ToggleScreen extends StatelessWidget {
       builder: ((context) {
         return alertDialog;
       }),
+    );
+  }
+}
+
+class NavToVisaScreen extends StatelessWidget {
+  const NavToVisaScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const VisaScreen()),
+        );
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 120.h,
+            width: 120.h,
+            child: Image.asset(
+              AssetsData.visaImage,
+              fit: BoxFit.fill,
+            ),
+          ),
+          SizedBox(
+            height: 12.h,
+          ),
+          Text(
+            'Pay by card',
+            style: TextStyle(
+                fontSize: 22.sp,
+                color: MyColors.orangeColor,
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }

@@ -29,10 +29,7 @@ class PaymentServices {
   static Future<Response> authOfPayment() async {
     return await postData(
       url: ApiConstant.authEndPoint,
-      data: {
-        "api_key":
-            "ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SnVZVzFsSWpvaWFXNXBkR2xoYkNJc0ltTnNZWE56SWpvaVRXVnlZMmhoYm5RaUxDSndjbTltYVd4bFgzQnJJam8yT1RNek5qaDkueVozcFBWajVSbjNCQmg2WG9RSEVmeEk1bU5ORndWTkI1eFBvTmV5U210S05WazRWV3dRNHdCc3BnWUlMeHIteC1UMV9qcExJTVNzTVFNSlktQzlPTUE="
-      },
+      data: {"api_key": "YOR_API_KEY"},
     );
   }
 
@@ -81,7 +78,7 @@ class PaymentServices {
           "state": "NA"
         },
         "currency": "EGP",
-        "integration_id": 3383780,
+        "integration_id": "YOR_INTEGRATION_ID",
         "lock_order_when_paid": "false"
       },
     ).then((value) {
